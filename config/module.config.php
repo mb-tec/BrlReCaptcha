@@ -1,5 +1,7 @@
 <?php
 
+namespace BrlReCaptcha;
+
 /**
  * Created by PhpStorm.
  * User: lars
@@ -7,17 +9,16 @@
  * Time: 20:00.
  */
 
-return array(
-
+return [
     'service_manager' => array(
         'invokeables' => array(
-            'BrlReCaptcha\Service\ReCaptcha' => 'BrlReCaptcha\Service\ReCaptchaService',
+            'BrlReCaptcha\Service\ReCaptcha' => Service\ReCaptchaService::class,
         ),
     ),
     'view_helpers' => array(
         'invokables' => array(
-            'browserlife/recaptcha' => 'BrlReCaptcha\Helper\ReCaptcha',
+            'browserlife/recaptcha' => Helper\ReCaptcha::class,
 
         ),
     ),
-);
+];

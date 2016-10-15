@@ -1,14 +1,14 @@
 # BrlReCaptcha - A ZF2 Module for Google ReCaptchaV2 
 Build Status: [![build status](https://ci.browserlife.de/projects/1/status.png?ref=master)](https://ci.browserlife.de/projects/1?ref=master)
  
-This modules makes it possible to use the new ReCaptcha [LINK](https://www.google.com/recaptcha) in your ZendFramework2 (ZF2) projects. 
+This modules makes it possible to use the new ReCaptcha [LINK](https://www.google.com/recaptcha) in your ZendFramework2+3 (ZF2/3) projects. 
 
 I created this module, since [ZendFrameworkService\ReCaptcha](https://github.com/zendframework/ZendService_ReCaptcha) seems to be dead and is still on RCv1. 
 ## Installation 
 ### with composer
 Just add the following line to your requirements:
 ```json
-"browserlife/zf2-recaptcha": "dev-master"
+"mb-tec/zf-recaptcha": "1.*"
 ```
 and run
 ```bash
