@@ -3,7 +3,6 @@
   "type": "library",
   "description": "ReCaptcha v2.0 module for Zend Framework 2 & 3 (ZF2 * ZF3)",
   "keywords": [
-    "zf2",
     "zf3",
     "recaptcha",
     "captcha"
@@ -25,19 +24,31 @@
     }
   ],
   "require": {
-    "php": ">=5.6",
+    "php": "5.6 || ^7.0",
     "zendframework/zend-captcha": "2.*"
+  },
+  "require-dev"  : {
+    "phpunit/phpunit"           : "~5.5",
+    "squizlabs/php_codesniffer" : "~2.3.4"
   },
   "autoload": {
     "psr-4": {
       "BrlReCaptcha\\": "src/"
     },
-    "psr-0": {
-      "BrlReCaptcha\\": "src/"
-    },
     "classmap": [
       "./Module.php"
     ]
+  }
+  "scripts": {
+    "check": [
+      "@cs-check",
+      "@test"
+    ],
+    "upload-coverage": "coveralls -v",
+    "cs-check": "php-cs-fixer --version && php-cs-fixer fix -v --diff --dry-run",
+    "cs-fix": "php-cs-fixer fix -v",
+    "test": "phpunit",
+    "test-coverage": "phpunit --coverage-clover clover.xml"
   }
 }
 

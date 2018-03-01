@@ -10,15 +10,15 @@ namespace BrlReCaptcha;
  */
 
 return [
-    'service_manager' => array(
-        'invokeables' => array(
+    'service_manager' => [
+        'invokeables' => [
             'BrlReCaptcha\Service\ReCaptcha' => Service\ReCaptchaService::class,
-        ),
-    ),
-    'view_helpers' => array(
-        'invokables' => array(
+        ],
+    ],
+    'view_helpers' => [
+        'invokables' => [
             'browserlife/recaptcha' => Helper\ReCaptcha::class,
 
-        ),
-    ),
+        ],
+    ],
 ];
